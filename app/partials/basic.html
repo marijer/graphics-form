@@ -29,11 +29,13 @@
     <input type="text" name="byline" class="form-control" ng-model="graphic.byline">
   </div>
 
+  <div form-group label='News Category' blur='false'>
+    <select ng-model="graphic.newsCategory"
+         ng-options="c.value as c.title for c in ctrl.newscategories"> </select>
+  </div>
+
   <div class="form-group no-gutter col-sm-12">
     <label for="date" class="col-sm-12 control-label">Date*</label>
-    <div ng-if="graphicForm.day.$touched && graphicForm.month.$touched && graphicForm.year.$touched">
-        you inserted a date
-    </div>
 
     <div class="col-xs-2">
       <input type="text" 
@@ -67,13 +69,13 @@
             ng-max='4'
             required />
     </div>
-  </div>
 
-  <div form-group label='News Category' blur='false'>
-    <select ng-model="graphic.newsCategory"
-         ng-options="c.value as c.title for c in ctrl.newscategories"> </select>
-  </div>
+    <div ng-if="graphicForm.day.$touched && graphicForm.month.$touched && graphicForm.year.$touched">
+      <span class='actual-time'>{{ ctrl.getDate( graphic ) | date:'EEEE, MMMM d, y' }}</span>
+      <span class='relative-time'>{{ ctrl.getDate( graphic ) | timeAgo }}</span>
+    </div>
 
+  </div>
 
 </div>
 
