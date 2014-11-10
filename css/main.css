@@ -1,0 +1,11 @@
+
+
+
+.no-gutter [class*="-"] {
+	padding-left:0;
+}
+
+/* resetting this is not nice */
+.form-control{
+	padding-left: 6px !important;
+} 

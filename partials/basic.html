@@ -1,0 +1,86 @@
+<h3>Main</h3>
+<div class='col-md-6'>
+  <div form-group label='Title' blur='false'>
+    <input type="text" 
+           name="title" 
+           class="form-control" 
+           ng-model="graphic.title" 
+           ng-blur="setOnBlur()"
+           required />
+    <p ng-show="graphicForm.title.$invalid && graphicForm.title.$dirty" class="help-block">
+      The title is required.
+    </p>
+  </div>
+
+  <div class="form-group">
+    <label>Url*</label>
+    <input type="url" 
+           name="url" 
+           class="form-control" 
+           ng-model="graphic.url" 
+           required />
+    <p ng-show="graphicForm.url.$error.url && graphicForm.url.$dirty" class="help-block">
+      The url is required.
+    </p>
+  </div>
+
+  <div class="form-group">
+    <label>byline</label>
+    <input type="text" name="byline" class="form-control" ng-model="graphic.byline">
+  </div>
+
+  <div class="form-group no-gutter col-sm-12">
+    <label for="date" class="col-sm-12 control-label">Date*</label>
+    <div ng-if="graphicForm.day.$touched && graphicForm.month.$touched && graphicForm.year.$touched">
+        you inserted a date
+    </div>
+
+    <div class="col-xs-2">
+      <input type="text" 
+            class="form-control" 
+            placeholder="day" 
+            name='day'
+            ng-model="graphic.day" 
+            ng-min='2'
+            ng-max='2'
+            required />
+    </div>
+
+    <div class="col-xs-2">
+      <input type="text" 
+            class="form-control" 
+            placeholder="month" 
+            name='month'
+            ng-min='2'
+            ng-max='2'
+            ng-model="graphic.month" 
+            required />
+    </div>
+
+    <div class="col-xs-3">
+      <input type="text" 
+            class="form-control" 
+            placeholder="year" 
+            name='year'
+            ng-model="graphic.year" 
+            ng-min='4'
+            ng-max='4'
+            required />
+    </div>
+  </div>
+
+  <div form-group label='News Category' blur='false'>
+    <select ng-model="graphic.newsCategory"
+         ng-options="c.value as c.title for c in ctrl.newscategories"> </select>
+  </div>
+
+
+</div>
+
+<div class='col-md-6'>
+  <div class="form-group">
+    <label for="exampleInputFile">File input</label>
+    <input type="file" id="exampleInputFile">
+  </div>
+
+</div>
