@@ -1,3 +1,6 @@
+(function(){
+	'use strict';
+
 app.filter('timeAgo', [function(){
 	var ONE_SECOND  =	1000,
 			ONE_MINUTE  = ONE_SECOND * 60,
@@ -42,4 +45,6 @@ app.filter('timeAgo', [function(){
 
 				return total + ' ' + str;
 		}
-}]);
+	}]);
+
+}());
