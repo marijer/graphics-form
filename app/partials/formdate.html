@@ -1,0 +1,39 @@
+<label for="date" class="col-sm-12 control-label">Date*</label>
+
+<div class="col-xs-2">
+  <input type="text" 
+        class="form-control" 
+        placeholder="day" 
+        name='day'
+        ng-model="graphic.day" 
+        ng-min='2'
+        ng-max='2'
+        required />
+</div>
+
+<div class="col-xs-2">
+  <input type="text" 
+        class="form-control" 
+        placeholder="month" 
+        name='month'
+        ng-min='2'
+        ng-max='2'
+        ng-model="graphic.month" 
+        required />
+</div>
+
+<div class="col-xs-3">
+  <input type="text" 
+        class="form-control" 
+        placeholder="year" 
+        name='year'
+        ng-model="graphic.year" 
+        ng-min='4'
+        ng-max='4'
+        required />
+</div>
+
+<div ng-if="graphicForm.day.$touched && graphicForm.month.$touched && graphicForm.year.$touched">
+  <span class='actual-time'>{{ getDate( graphic ) | date:'EEEE, MMMM d, y' }}</span>
+  <span class='relative-time'>{{ getDate( graphic ) | timeAgo }}</span>
+</div>

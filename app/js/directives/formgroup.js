@@ -1,7 +1,7 @@
 (function(){
 	'use strict';
 
-	 app.directive('formGroup', function(){
+	 app.directive('formGroup', [function(){
 	 		return {
 		 		restrict: 'AE',
 		 		transclude: true,
@@ -9,12 +9,7 @@
 		 			label: '@',
 		 			blur: '@'
 		 		},
-		 		controller: function( $scope ){
-		 			//console.log( $scope );
-		 			// $scope.blurBool
-		 		},
 		 		templateUrl: 'app/partials/formgroup.html'
 		 	};
-	 });
-
+	 }]);
 })();

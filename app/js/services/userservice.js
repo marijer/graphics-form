@@ -2,7 +2,7 @@
 	'use strict';
 
 	app.factory('UserService', [function(){
-		var service{
+		var service = {
 			isLoggedIn: false,
 
 			session: function() {
