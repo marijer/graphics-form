@@ -58,7 +58,12 @@
 	          }else{
 	          	console.log( 'not a valid type' );
 	          }
-          }
+          };
+
+          reader.onerror = function( evt ) {
+					    console.error( "File could not be read! Code " + evt.target.error.code );
+					};
+
 
 	      	file = event.dataTransfer.files[0];
 	      	size = file.size;

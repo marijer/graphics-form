@@ -32,13 +32,6 @@
            ng-model="ctrl.graphic.byline">
   </div>
 
-  <div form-group label='Category' blur='false'>
-    <select ng-model="ctrl.graphic.newsCategory"
-         ng-options="c.value as c.title for c in ctrl.newscategories"> 
-          <option value="">-- kies een categorie --</option>
-    </select>
-  </div>
-
   <form-date class="form-group no-gutter col-sm-12"
         form-data="graphicForm" 
         obj-data="ctrl.graphic">
@@ -47,6 +40,13 @@
 </div>
 
 <div class='col-md-6'>
+
+  <div form-group label='Category' blur='false'>
+    <select ng-model="ctrl.graphic.newsCategory"
+         ng-options="c.value as c.title for c in ctrl.newscategories"> 
+          <option value="">-- choose a category --</option>
+    </select>
+  </div>
 
   <div class="form-group">
     <label for="exampleInputFile">File input</label>
@@ -57,7 +57,6 @@
           data-displaywidth='300'
           class="filedrop-container">
     </div>
-    
   </div>
 
 </div>

@@ -14,11 +14,25 @@
 
 .dropzone {
 	width: 320px;
-	height: 200px;
+	min-height: 200px;
 	border: 1px solid #CCC;
 	display: block;
+	position: relative;
+}
+
+.dropzone p{
+  position: absolute;
+  z-index: -1;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
 }
 
 .dropzone.isDragging{
 	background: red;
+}
+
+.dropzone img {
+	z-index: 100;
 }

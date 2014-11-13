@@ -33,7 +33,7 @@
         required />
 </div>
 
-<div ng-if="formData.day.$touched && formData.month.$touched && formData.year.$touched">
+<div ng-if="formData.day.$touched && formData.month.$touched && formData.year.$touched" class="col-sm-12" >
   <div class='actual-time'>{{ getDate( objData ) | date:'EEEE, MMMM d, y' }}</div>
   <div class='relative-time'>{{ getDate( objData ) | timeAgo }}</div>
 </div>
