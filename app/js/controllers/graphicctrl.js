@@ -8,7 +8,8 @@
 
  		self.graphic = {
  				title: 'Test',
- 				byline: 'Test'
+ 				byline: 'Test',
+ 				img: ''
  		};
 
  		self.participation = contentService.getParticipation();

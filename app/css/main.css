@@ -9,3 +9,16 @@
 .form-control{
 	padding-left: 6px !important;
 } 
+
+/* file drop container */
+
+.dropzone {
+	width: 320px;
+	height: 200px;
+	border: 1px solid #CCC;
+	display: block;
+}
+
+.dropzone.isDragging{
+	background: red;
+}

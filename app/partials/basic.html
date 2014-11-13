@@ -39,15 +39,25 @@
     </select>
   </div>
 
-  <form-date class="form-group no-gutter col-sm-12" form-data="graphicForm" obj-data='ctrl.graphic'>
+  <form-date class="form-group no-gutter col-sm-12"
+        form-data="graphicForm" 
+        obj-data="ctrl.graphic">
   </form-date>
 
 </div>
 
 <div class='col-md-6'>
+
   <div class="form-group">
     <label for="exampleInputFile">File input</label>
-    <input type="file" id="exampleInputFile">
+
+    <div file-dropzone="[image/png, image/jpeg, image/gif]" 
+          data-max-file-size="3" 
+          obj-data='ctrl.graphic.img'
+          data-displaywidth='300'
+          class="filedrop-container">
+    </div>
+    
   </div>
 
 </div>
