@@ -7,16 +7,16 @@
  		self.userService = UserService;
 
  		self.graphic = {
- 				title: 'hi',
- 				byline: 'Zoe'
+ 				title: 'Test',
+ 				byline: 'Test'
  		};
 
  		self.participation = contentService.getParticipation();
  		self.newscategories = contentService.getNewscategories();
 
-
  		self.submitForm = function(isValid, data) {
 		    //if(!isValid){ return; }
+
 		    console.log( data );
 		 }
 

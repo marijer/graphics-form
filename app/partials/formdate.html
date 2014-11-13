@@ -5,7 +5,7 @@
         class="form-control" 
         placeholder="day" 
         name='day'
-        ng-model="graphic.day" 
+        ng-model="objData.day" 
         ng-min='2'
         ng-max='2'
         required />
@@ -18,7 +18,7 @@
         name='month'
         ng-min='2'
         ng-max='2'
-        ng-model="graphic.month" 
+        ng-model="objData.month" 
         required />
 </div>
 
@@ -27,13 +27,13 @@
         class="form-control" 
         placeholder="year" 
         name='year'
-        ng-model="graphic.year" 
+        ng-model="objData.year" 
         ng-min='4'
         ng-max='4'
         required />
 </div>
 
-<div ng-if="graphicForm.day.$touched && graphicForm.month.$touched && graphicForm.year.$touched">
-  <span class='actual-time'>{{ getDate( graphic ) | date:'EEEE, MMMM d, y' }}</span>
-  <span class='relative-time'>{{ getDate( graphic ) | timeAgo }}</span>
+<div ng-if="formData.day.$touched && formData.month.$touched && formData.year.$touched">
+  <div class='actual-time'>{{ getDate( objData ) | date:'EEEE, MMMM d, y' }}</div>
+  <div class='relative-time'>{{ getDate( objData ) | timeAgo }}</div>
 </div>

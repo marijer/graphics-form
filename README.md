@@ -10,3 +10,9 @@ Technologies/Libraries used
 
 Bootstrap
 AngularJS
+
+Nog te gebruiken
+
+Angular ui router
+RequireJs
+Grunt

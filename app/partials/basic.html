@@ -4,7 +4,7 @@
     <input type="text" 
            name="title" 
            class="form-control" 
-           ng-model="graphic.title" 
+           ng-model="ctrl.graphic.title" 
            ng-blur="setOnBlur()"
            required />
     <p ng-show="graphicForm.title.$invalid && graphicForm.title.$dirty" class="help-block">
@@ -17,7 +17,7 @@
     <input type="url" 
            name="url" 
            class="form-control" 
-           ng-model="graphic.url" 
+           ng-model="ctrl.graphic.url" 
            required />
     <p ng-show="graphicForm.url.$error.url && graphicForm.url.$dirty" class="help-block">
       The url is required.
@@ -26,17 +26,20 @@
 
   <div class="form-group">
     <label>byline</label>
-    <input type="text" name="byline" class="form-control" ng-model="graphic.byline">
+    <input type="text" 
+           name="byline" 
+           class="form-control" 
+           ng-model="ctrl.graphic.byline">
   </div>
 
   <div form-group label='Category' blur='false'>
-    <select ng-model="graphic.newsCategory"
+    <select ng-model="ctrl.graphic.newsCategory"
          ng-options="c.value as c.title for c in ctrl.newscategories"> 
           <option value="">-- kies een categorie --</option>
     </select>
   </div>
 
-  <form-date class="form-group no-gutter col-sm-12">
+  <form-date class="form-group no-gutter col-sm-12" form-data="graphicForm" obj-data='ctrl.graphic'>
   </form-date>
 
 </div>
