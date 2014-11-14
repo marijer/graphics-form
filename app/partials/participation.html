@@ -2,6 +2,6 @@
 
 <div class='checkbox' ng-repeat='item in ctrl.participation'>
   <label>
-    <input type="checkbox" value="" ng-model='graphic.item.value'>{{item.title}}
+    <input type="checkbox" value="ctrl.graphic[item]" ng-model='ctrl.graphic[item.value]'>{{item.title}}
   </label>
 </div>

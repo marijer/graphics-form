@@ -12,6 +12,9 @@
 			link: function( $scope, $element, $attrs ){
 
 				$scope.getDate = function( obj ){
+					if( !obj.year || !obj.month || !obj.day ){ 
+						return new Date();
+					}
 		 			return new Date( obj.year, obj.month - 1, obj.day);
 		 		}
 

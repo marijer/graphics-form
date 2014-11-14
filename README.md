@@ -16,3 +16,9 @@ Nog te gebruiken
 Angular ui router
 RequireJs
 Grunt
+
+
+# Sources
+
+Drag & Drop
+http://buildinternet.com/2013/08/drag-and-drop-file-upload-with-angularjs/

@@ -2,10 +2,9 @@
 	padding-left:0;
 }
 
-/* resetting this is not nice */
-.form-control{
-	padding-left: 6px !important;
-} 
+.ng-invalid-required.ng-touched {
+border-color: red;
+}
 
 /* file drop container */
 
@@ -15,11 +14,12 @@
 	border: 1px solid #CCC;
 	display: block;
 	position: relative;
+
+	transition: background-color .1s linear;
 }
 
-.dropzone p{
+.dropzone p {
   position: absolute;
-  z-index: -1;
   top: 50%;
   left: 50%;
   margin-right: -50%;
@@ -27,9 +27,20 @@
 }
 
 .dropzone.isDragging{
-	background: red;
+	background: #ECECEC;
+	border-color: #A8DBFF;
 }
 
 .dropzone img {
 	z-index: 100;
+}
+
+.dropzone .dropImage {
+	font-size: 14px;
+	font-weight: bold;
+	background: red;
+	color: #FFF;
+	border-radius: 20px;
+	padding: 5px 10px;
+	display: inline-block;
 }

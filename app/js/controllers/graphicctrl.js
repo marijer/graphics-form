@@ -9,7 +9,7 @@
  		self.graphic = {
  				title: 'Test',
  				byline: 'Test',
- 				img: ''
+ 				img: '',
  		};
 
  		self.participation = contentService.getParticipation();

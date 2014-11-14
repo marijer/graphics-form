@@ -11,6 +11,7 @@
 			link: function( $scope, $element, $attrs ){
 
 				$scope.isDragging = false;
+				$scope.isEmpty = true;
 				$scope.displayWidth = $attrs.displaywidth;
 
 				var reader = new FileReader(),
@@ -51,6 +52,7 @@
 	              return $scope.$apply(function() {
 	                $scope.objData = evt.target.result;
 	                $scope.isDragging = false;
+	                $scope.isEmpty = false;
 	                if ( angular.isString( $scope.fileName ) ) {
 	                  return $scope.fileName = name;
 	                }

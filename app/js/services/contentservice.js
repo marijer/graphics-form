@@ -5,7 +5,7 @@
 
 			var participation = [
 			 			{
-			 				value: 'Social',
+			 				value: 'social',
 			 				title: 'Social Sphere'
 			 			},
 						{
@@ -18,7 +18,7 @@
 						},
 						{
 							value: 'gamification',
-							title: 'Gamefication'
+							title: 'Gamification'
 						},
 						{
 							value: 'tool',
@@ -38,10 +38,6 @@
 						{
 							value: 'Economy',
 							title: 'Economy'
-						},
-						{
-							value: 'gamification',
-							title: 'Gamefication'
 						},
 						{
 							value: 'tool',
