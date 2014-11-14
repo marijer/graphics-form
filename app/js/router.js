@@ -1,7 +1,8 @@
 (function(){
 	'use strict';
 
-	app.config(['$routeProvider', function($routeProvider) {
+	angular.module("app")
+	.config(['$routeProvider', function($routeProvider) {
     $routeProvider
 	    .when('/login', {
 	      templateUrl: 'app/partials/login.html',
@@ -10,6 +11,14 @@
 	    .when('/new', {
 	      templateUrl: 'app/partials/graphicform.html',
 	      controller: 'graphicCtrl as ctrl',
+	    })
+	    .otherwise( {redirectTo: '/new'} );
+  }]);
+
+})();
+
+
+		// need to look at this for authentication
 	   //    resolve: {
 				// 	auth: ['$q', '$location', 'UserService', 
 				// 		function($q, $location, UserService) {
@@ -20,8 +29,3 @@
 				// 			}); 
 				// 	}]
 				// }
-	    })
-	    .otherwise( {redirectTo: '/new'} );
-  }]);
-
-})();

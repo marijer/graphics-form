@@ -1,30 +1,34 @@
 (function(){
 	'use strict';
 
-		 app.factory('dbService', ['$http', function( $http ){
-			var myUrl = '/api/note';
+		angular.module("app")
+			.factory('dbService', ['$http', function( $http ){
 
-	 		function save( form ){
-	 			$http.post( myUrl, form )
-					.then(fetchTodos) .then(function(response) {
-			        // self.newTodo = {};
-			    });
-				};
+				var serviceBase = 'api/v1/';
 
-				function get(){
-					return $http.get( myUrl )
-					.then( function( response ) {
-						self.items = response.data; 
-					}, function( errResponse ) {
-						console.error('Error while fetching notes');
-					});
+				var obj = {};
+
+				obj.get = function( q ){
+	        return $http.get(serviceBase + q).then(function (results) {
+	            return results.data;
+	        });
 				}
-			
-			return{
-				save: save,
-				get: get
-			}
+			  obj.post = function (q, object) {
+	          return $http.post(serviceBase + q, object).then(function (results) {
+	              return results.data;
+	          });
+	      };
+	      obj.put = function (q, object) {
+	          return $http.put(serviceBase + q, object).then(function (results) {
+	              return results.data;
+	          });
+	      };
+	      obj.delete = function (q) {
+	          return $http.delete(serviceBase + q).then(function (results) {
+	              return results.data;
+	          });
+	      };
+				return obj;
 
 	 }]);
-
 })();

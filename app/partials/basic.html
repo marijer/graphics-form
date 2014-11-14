@@ -22,7 +22,7 @@
              class="form-control" 
              ng-model="ctrl.graphic.url" 
              required />
-        <p ng-show="graphicForm.url.$error.url && graphicForm.url.$dirty" class="help-block">
+        <p ng-show="graphicForm.url.$error.url && graphicForm.url.$touched" class="help-block">
           The url is required.
         </p>
     </div>

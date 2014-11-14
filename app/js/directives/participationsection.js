@@ -1,7 +1,8 @@
 (function(){
 	'use strict';
 
-	 app.directive('participationSection', [function(){
+	angular.module("app")
+	 .directive('participationSection', [function(){
 	 		return {
 	 				restrict: 'A',
 	 				templateUrl: 'app/partials/participation.html'

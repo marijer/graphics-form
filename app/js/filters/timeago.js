@@ -1,7 +1,8 @@
 (function(){
 	'use strict';
 
-app.filter('timeAgo', [function(){
+	angular.module("app")
+	.filter('timeAgo', [function(){
 	var ONE_SECOND  =	1000,
 			ONE_MINUTE  = ONE_SECOND * 60,
 			ONE_HOUR    = ONE_MINUTE * 60,

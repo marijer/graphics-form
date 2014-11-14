@@ -1,1 +1,1 @@
-var app = angular.module('addGraphicApp', ['ngRoute']);
+var app = angular.module('app', ['ngRoute']);

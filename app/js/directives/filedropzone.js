@@ -1,7 +1,8 @@
 (function(){
 	'use strict';
 
-	app.directive('fileDropzone', [function(){
+	angular.module("app")
+	.directive('fileDropzone', [function(){
 		return{
 			scope: {
 					objData: '='

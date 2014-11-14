@@ -1,7 +1,8 @@
 (function(){
 	'use strict';
 	
-	 app.factory('contentService', [function(){
+	angular.module("app")
+	.factory('contentService', [function(){
 
 			var participation = [
 			 			{

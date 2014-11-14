@@ -28,3 +28,6 @@ http://buildinternet.com/2013/08/drag-and-drop-file-upload-with-angularjs/
 
 Grunt configuration
 http://www.html5rocks.com/en/tutorials/tooling/supercharging-your-gruntfile/
+
+Backend configuration
+http://www.angularcode.com/product-inventory-management-using-angularjs-mysql-and-php-restful-api/

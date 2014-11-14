@@ -1,7 +1,8 @@
 (function(){
 	'use strict';
-
-	app.directive('formDate', [function(){
+	
+	angular.module("app")
+	.directive('formDate', [function(){
 		return {
 			restrict: 'E',
 			scope: {

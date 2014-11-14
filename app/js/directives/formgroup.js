@@ -1,7 +1,8 @@
 (function(){
 	'use strict';
 
-	 app.directive('formGroup', [function(){
+	angular.module("app")
+	 .directive('formGroup', [function(){
 	 		return {
 		 		restrict: 'AE',
 		 		transclude: true,

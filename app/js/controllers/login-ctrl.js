@@ -1,7 +1,8 @@
 (function(){
 	'use strict';
 
-	app.controller('LoginCtrl', ['UserService', function( UserService ){
+	angular.module("app")
+	.controller('LoginCtrl', ['UserService', function( UserService ){
 		var self = this;
 
 		self.userService = UserService;

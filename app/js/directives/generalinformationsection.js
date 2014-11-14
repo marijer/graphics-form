@@ -1,7 +1,8 @@
 (function() {	 
 	'use strict';
 
-	 app.directive('generalinformationSection', [function(){
+		angular.module("app")
+	 .directive('generalinformationSection', [function(){
 	 		return {
 	 				restrict: 'A',
 	 				transclude: true,

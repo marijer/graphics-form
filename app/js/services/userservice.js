@@ -1,7 +1,8 @@
 (function(){
 	'use strict';
 
-	app.factory('UserService', [function(){
+	angular.module("app")
+	.factory('UserService', [function(){
 		var service = {
 			isLoggedIn: false,
 
