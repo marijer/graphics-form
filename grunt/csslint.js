@@ -2,7 +2,7 @@ module.exports = function (grunt, options) {
 	return {
 		strict: {
       options: {
-        import: 2
+        import: 2,
       },
       src: ['app/css/*.css']
     },
