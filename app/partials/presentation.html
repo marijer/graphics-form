@@ -1,0 +1,37 @@
+<div class='col-md-12'>
+  <h3>Presentation</h3>
+</div>
+<div class='col-md-6'>
+	
+
+  <div class="form-group">
+    <label class='col-sm-12'>Reader Generated</label>
+    <div class='col-sm-12'>
+				<label ng-repeat="item in ctrl.configContent.readerdrivenValues" class="radio-inline">
+			       <input type="radio" ng-model="ctrl.graphic.readerdriven" ng-value="item.value" />
+			       {{item.title}}
+			  </label>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label class='col-sm-12'>Visualization types</label>
+    <div class='col-sm-12'>
+				<label ng-repeat="item in ctrl.configContent.visualizationtypesValues" class="radio-inline">
+			       <input type="radio" ng-model="ctrl.graphic.visualizationtype" ng-value="item.value" />
+			       {{item.title}}
+			  </label>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label class='col-sm-12'>Annotation</label>
+    <div class='col-sm-12'>
+				<label ng-repeat="item in ctrl.configContent.annotationValues" class="radio-inline">
+			       <input type="radio" ng-model="ctrl.graphic.annotation" ng-value="item.value" />
+			       {{item.title}}
+			  </label>
+    </div>
+  </div>
+
+</div>

@@ -6,6 +6,7 @@
  		var self = this;
 
  		self.userService = UserService;
+ 		self.configContent = contentService;
 
  		self.getItems = function(){
 	    dbService.get('products').then(function( data ){
@@ -14,7 +15,7 @@
 	    });
 	  };
 
-	  self.getItems();
+	 // self.getItems();
 
     self.deleteProduct = function( product ){
         if(confirm("Are you sure to remove the product")){
@@ -60,8 +61,6 @@
  				title: 'Test',
  		};
 
- 		self.participation = contentService.getParticipation();
- 		self.newscategories = contentService.getNewscategories();
 
  		self.submitForm = function(isValid, data) {
 		    //if(!isValid){ return; }

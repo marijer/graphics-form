@@ -2,12 +2,21 @@
   <h3>Main</h3>
 </div>
 <div class='col-md-6'>
+
+  <div class='form-group'>
+    <div form-group label='News Organization' blur='false'>
+      <select ng-model="ctrl.graphic.newspaper"
+              ng-options="c.value as c.title for c in ctrl.configContent.newspapers"> 
+               <option value="">-- choose a newsorganization --</option>
+      </select>
+    </div>
+  </div>
+
   <div form-group label='Title' blur='false' class="form-group">
       <input type="text" 
            name="title" 
            class="form-control" 
            ng-model="ctrl.graphic.title" 
-           ng-blur="setOnBlur()"
            required />
       <p ng-show="graphicForm.title.$invalid && graphicForm.title.$dirty" class="help-block">
         The title is required.
@@ -20,11 +29,22 @@
       <input type="url" 
              name="url" 
              class="form-control" 
-             ng-model="ctrl.graphic.url" 
+             ng-model="ctrl.graphic.url"
+             placeholder='http://'
              required />
         <p ng-show="graphicForm.url.$error.url && graphicForm.url.$touched" class="help-block">
           The url is required.
         </p>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label class='col-sm-12'>sources</label>
+    <div class='col-sm-12'>
+     <input type="text" 
+           name="sources" 
+           class="form-control col-sm-12" 
+           ng-model="ctrl.graphic.source">
     </div>
   </div>
 
@@ -34,7 +54,7 @@
      <input type="text" 
            name="byline" 
            class="form-control col-sm-12" 
-           ng-model="ctrl.graphic.byline">
+           ng-model="ctrl.graphic.credits">
     </div>
   </div>
 
@@ -50,8 +70,7 @@
   <div class='form-group'>
     <div form-group label='Category' blur='false'>
       <select ng-model="ctrl.graphic.newsCategory"
-              class="col-sm-8"
-              ng-options="c.value as c.title for c in ctrl.newscategories"> 
+              ng-options="c.value as c.title for c in ctrl.configContent.newscategories"> 
                <option value="">-- choose a category --</option>
       </select>
     </div>
@@ -59,13 +78,19 @@
 
   <div class="form-group">
     <label class='col-sm-12' for="exampleInputFile">File input</label>
-
     <div file-dropzone="[image/png, image/jpeg, image/gif]" 
           data-max-file-size="3" 
           obj-data='ctrl.graphic.img'
           data-displaywidth='300'
-          class="filedrop-container col-sm-12">
+          class="filedrop-container col-sm-10">
     </div>
+  </div>
+
+
+  <div class='checkbox'>
+    <label class='col-sm-12'>
+      <input type="checkbox" value="ctrl.graphic.favorite" ng-model='ctrl.graphic.favorite'>favorite
+    </label>
   </div>
 
 </div>

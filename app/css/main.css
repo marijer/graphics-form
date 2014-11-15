@@ -9,7 +9,7 @@ border-color: red;
 /* file drop container */
 
 .dropzone {
-	width: 320px;
+	width: 100%;
 	min-height: 200px;
 	border: 1px solid #CCC;
 	display: block;

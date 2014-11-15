@@ -2,10 +2,10 @@
 	'use strict';
 	
 	angular.module("app")
-	 .directive('visualformSection', [function(){
+	 .directive('presentationSection', [function(){
 	 		return {
 	 			restrict: 'A',
-	 			templateUrl: 'app/partials/visualform.html'
+	 			templateUrl: 'app/partials/presentation.html'
 	 		};
 	 }]);	
 })();
