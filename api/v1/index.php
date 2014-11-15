@@ -21,15 +21,42 @@ delete(table name, where clause as array)
 // Products
 $app->get('/products', function() { 
     global $db;
-    $rows = $db->select("products","id,sku,name,description,price,mrp,stock,image,packing,status",array());
+    $rows = $db->select(
+                    "graphics",
+                       "id,
+                        favorite,
+                        newspaper,
+                        title,
+                        date,
+                        newscategory,
+                        credits,
+                        source,
+                        url,
+                        thumbnail,
+                        socialdata,
+                        readergenerated,
+                        opendata,
+                        gamification,
+                        tool,
+                        readerdriven,
+                        visualizationtype,
+                        annotation,
+                        flash,
+                        visualform,
+                        visualformsub,
+                        updated,
+                        hyperlinking,
+                        comments",
+                    array()
+                    );
     echoResponse(200, $rows);
 });
 
 $app->post('/products', function() use ($app) { 
     $data = json_decode($app->request->getBody());
-    $mandatory = array('name');
+    $mandatory = array( 'title' );
     global $db;
-    $rows = $db->insert("products", $data, $mandatory);
+    $rows = $db->insert("graphics", $data, $mandatory);
     if($rows["status"]=="success")
         $rows["message"] = "Product added successfully.";
     echoResponse(200, $rows);
@@ -40,7 +67,7 @@ $app->put('/products/:id', function($id) use ($app) {
     $condition = array('id'=>$id);
     $mandatory = array();
     global $db;
-    $rows = $db->update("products", $data, $condition, $mandatory);
+    $rows = $db->update("graphics", $data, $condition, $mandatory);
     if($rows["status"]=="success")
         $rows["message"] = "Product information updated successfully.";
     echoResponse(200, $rows);
@@ -48,7 +75,7 @@ $app->put('/products/:id', function($id) use ($app) {
 
 $app->delete('/products/:id', function($id) { 
     global $db;
-    $rows = $db->delete("products", array('id'=>$id));
+    $rows = $db->delete("graphics", array('id'=>$id));
     if($rows["status"]=="success")
         $rows["message"] = "Product removed successfully.";
     echoResponse(200, $rows);
