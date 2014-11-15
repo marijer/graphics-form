@@ -1,16 +1,7 @@
 <div class='col-md-12'>
   <h3>Main</h3>
 </div>
-<div class='col-md-6'>
-
-  <div class='form-group'>
-    <div form-group label='News Organization' blur='false'>
-      <select ng-model="ctrl.graphic.newspaper"
-              ng-options="c.value as c.title for c in ctrl.configContent.newspapers"> 
-               <option value="">-- choose a newsorganization --</option>
-      </select>
-    </div>
-  </div>
+<div class='col-md-5'>
 
   <div form-group label='Title' blur='false' class="form-group">
       <input type="text" 
@@ -58,17 +49,26 @@
     </div>
   </div>
 
-  <form-date class="form-group"
+  <form-date
         form-data="graphicForm" 
         obj-data="ctrl.graphic">
   </form-date>
 
 </div>
 
-<div class='col-md-6'>
+<div class='col-md-7'>
 
   <div class='form-group'>
-    <div form-group label='Category' blur='false'>
+    <div form-group label='News Organization' blur='false'>
+      <select ng-model="ctrl.graphic.newspaper"
+              ng-options="c.value as c.title for c in ctrl.configContent.newspapers"> 
+               <option value="">-- choose a newsorganization --</option>
+      </select>
+    </div>
+  </div>
+
+  <div class='form-group'>
+    <div form-group label='News Category' blur='false'>
       <select ng-model="ctrl.graphic.newsCategory"
               ng-options="c.value as c.title for c in ctrl.configContent.newscategories"> 
                <option value="">-- choose a category --</option>
@@ -84,13 +84,6 @@
           data-displaywidth='300'
           class="filedrop-container col-sm-10">
     </div>
-  </div>
-
-
-  <div class='checkbox'>
-    <label class='col-sm-12'>
-      <input type="checkbox" value="ctrl.graphic.favorite" ng-model='ctrl.graphic.favorite'>favorite
-    </label>
   </div>
 
 </div>

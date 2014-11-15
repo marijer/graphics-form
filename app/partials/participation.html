@@ -1,22 +1,6 @@
-<div class='col-md-6'>
+<div class='col-md-12'>
   <h3>Participation</h3>
-	<div class='checkbox' ng-repeat='item in ctrl.configContent.participation'>
-	  <label>
+	  <label class='checkbox-inline' ng-repeat='item in ctrl.configContent.participation'>
 	    <input type="checkbox" value="ctrl.graphic[item]" ng-model='ctrl.graphic[item.value]'>{{item.title}}
 	  </label>
-	</div>
-</div>
-
-<div class='col-md-6'>
-  <h3>General</h3>
-
-  <div form-group label='Comments' class="form-group">
-      <textarea
-           name="comments" 
-           class="form-control" 
-           ng-model="ctrl.graphic.comments" 
-           />
-      </textarea>
-  </div>
-
 </div>

@@ -1,8 +1,6 @@
-<div class='col-md-12'>
+<div class='col-md-5'>
+
   <h3>Presentation</h3>
-</div>
-<div class='col-md-6'>
-	
 
   <div class="form-group">
     <label class='col-sm-12'>Reader Generated</label>
@@ -34,4 +32,23 @@
     </div>
   </div>
 
+</div>
+
+<div class='col-md-7'>
+  <h3>General</h3>
+
+  <div form-group label='Comments' class="form-group">
+      <textarea
+           name="comments" 
+           class="form-control" 
+           ng-model="ctrl.graphic.comments" 
+           />
+      </textarea>
+  </div>
+
+  <div class='checkbox'>
+    <label class='col-sm-12'>
+      <input type="checkbox" value="ctrl.graphic.favorite" ng-model='ctrl.graphic.favorite'>favorite
+    </label>
+  </div>
 </div>
