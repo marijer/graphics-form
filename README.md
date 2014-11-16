@@ -1,8 +1,10 @@
 Graphics Form
 
-A project which allows me to create a new version of the graphics form while learning AngularJs 1.3.
+A project build from scratch build with AngularJS 1.3.
 
-After working on Angular project with Geodan, and following a course by Trifork. I started to work on this form.
+After working on Angular project with Geodan, and following a course by Trifork, it seemed right to put the knowledge
+into action.
+
 
 #Technologies/Libraries used
 
@@ -15,12 +17,16 @@ Backend
 Task Runner
 - Grunt
 
-Need to do
+Need to add
 
 - Angular ui router
 - RequireJs
+- error messages & labels
+- set the configuration in a seperate file
 - Protractor
 - Sass
+- login system
+- edit option
 
 # Sources
 
