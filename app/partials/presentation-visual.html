@@ -6,12 +6,16 @@
 
 		<div class='col-md-2' ng-repeat='item in ctrl.configContent.visualformValues'>
 		  <label class='checkbox'>
-		    <input type="checkbox" value="item.value" ng-model="ctrl.graphic.visualform" >
+		    <input type="checkbox" 
+		    			check-list='ctrl.graphic.visualform'
+		    			value='{{item.value}}' >
 		    {{item.title}}
 		  </label>
 
 		  <label class='checkbox' ng-repeat='itemsub in item.sub'>
-		    <input type="checkbox" value="itemsub.value" ng-model="ctrl.graphic.visualformsub">
+		    <input type="checkbox" 
+		    			value="{{itemsub.value}}" 
+		    			check-list="ctrl.graphic.visualformsub">
 		    {{itemsub.title}}
 		  </label>
 

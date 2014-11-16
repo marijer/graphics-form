@@ -7,12 +7,15 @@
 			restrict: 'E',
 			scope: {
 				formData: '=',
-				objData: '='
+				objData: '=',
+				placeholderData: '='
 			},
 			templateUrl: 'app/partials/formdate.html',
-			link: function( $scope, $element, $attrs ){
+			link: function( $scope, $element, $attrs ){				
 
 				$scope.getDate = function( obj ){
+					$scope.objData.date = $scope.placeholderData.year + '' + $scope.placeholderData.month + '' + $scope.placeholderData.day;
+
 					if( !obj.year || !obj.month || !obj.day ){ 
 						return new Date();
 					}
