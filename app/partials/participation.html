@@ -1,6 +1,11 @@
 <div class='col-md-12'>
   <h3>Participation</h3>
 	  <label class='checkbox-inline' ng-repeat='item in ctrl.configContent.participation'>
-	    <input type="checkbox" value="ctrl.graphic[item]" ng-model='ctrl.graphic[item.value]'>{{item.title}}
+	    <input type="checkbox" 
+	    			value="ctrl.graphic[item]" 
+	    			ng-model='ctrl.graphic[item.value]'
+	    			ng-true-value="1"
+	    			ng-false-value="0">
+	    	{{item.title}}
 	  </label>
 </div>

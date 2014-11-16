@@ -48,7 +48,23 @@
 
   <div class='checkbox'>
     <label class='col-sm-12'>
-      <input type="checkbox" value="ctrl.graphic.favorite" ng-model='ctrl.graphic.favorite'>favorite
+      <input type="checkbox" 
+            value="ctrl.graphic.favorite" 
+            ng-model='ctrl.graphic.favorite'
+            ng-true-value="1"
+            ng-false-value="0">
+        favorite
     </label>
   </div>
+
+   <div class='checkbox'>
+    <label class='col-sm-12'>
+      <input type="checkbox" 
+            value="ctrl.graphic.flash" 
+            ng-model='ctrl.graphic.flash'
+            ng-true-value="1"
+            ng-false-value="0">
+      flash
+    </label>
+  </div> 
 </div>

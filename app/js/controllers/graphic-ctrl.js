@@ -57,9 +57,28 @@
         }
      };		
 
- 		self.graphic = {
- 				title: 'Test',
- 		};
+    // mock data
+    self.graphic = {
+        title: "Test", 
+        visualformsub: 0, 
+        visualform: 0, 
+        readerGenerated: 1, 
+        readerdriven: "author", 
+        annotation: "low", 
+        credits: "bam", 
+        day: "08", 
+        favorite: 1, 
+        gamification: 1, 
+        month: "07", 
+        newsCategory: "Conflict", 
+        newspaper: "Ny Times", 
+        source: "boem", 
+        url: "http://collection.marijerooze.nl", 
+        visualizationtype: "hybrid", 
+        year: "1986",
+        comments: 'lalallalalalal'
+      };
+
 
 
  		self.submitForm = function(isValid, data) {
@@ -67,7 +86,7 @@
 
 		    console.log( data );
 
-		    self.createProduct( data );
+		    //self.createProduct( data );
 		 }
 
 	}]);

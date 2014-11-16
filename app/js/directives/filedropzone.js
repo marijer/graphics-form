@@ -8,7 +8,7 @@
 					objData: '='
 			},
 			restrict: 'A',
-			templateUrl: 'app/partials/fileinput.html',
+			templateUrl: 'app/partials/filedropzone.html',
 			link: function( $scope, $element, $attrs ){
 
 				$scope.isDragging = false;
