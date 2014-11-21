@@ -45,7 +45,7 @@
 
 				function dropElement( evt ){
 					evt.preventDefault();
-					var file, size, type, lastModifiedDate;
+					var file, name, size, type, lastModifiedDate;
 
 
  					reader.onload = function( evt ) {
@@ -69,9 +69,12 @@
 
 
 	      	file = event.dataTransfer.files[0];
+	      	name = file.name;
 	      	size = file.size;
 	      	type = file.type;
 	      	lastModifiedDate = file.lastModifiedDate;
+
+	      	console.log( file.name );
 
 	      	reader.readAsDataURL(file);
 				}

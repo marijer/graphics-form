@@ -9,24 +9,24 @@
    self.configContent = contentService;
 
    self.getItems = function(){
-     dbService.get('products').then(function( data ){
-	        //self.products = data.data;
+     dbService.get('items').then(function( data ){
+	        //self.items = data.data;
 	        console.log( data.data )
        });
    };
 
 	 // self.getItems();
 
-   self.deleteProduct = function( product ){
+   self.deleteItem = function( product ){
     if(confirm("Are you sure to remove the product")){
-      dbService.delete("products/"+product.id).then(function(result){
-                //$scope.products = _.without($scope.products, _.findWhere($scope.products, {id:product.id}));
+      dbService.delete("items/"+product.id).then(function(result){
+                //$scope.items = _.without($scope.items, _.findWhere($scope.items, {id:product.id}));
               });
     }
   };
 
-  self.createProduct = function( product ){
-    dbService.post('products', product).then(function (result) {
+  self.addItem = function( product ){
+    dbService.post('items', product).then(function (result) {
       if(result.status != 'error'){
         var x = angular.copy(product);
         x.save = 'insert';
@@ -37,8 +37,8 @@
     });
   }
 
-  self.updateProduct = function( product ){
-    dbService.put('products/'+product.id, product).then(function (result) {
+  self.updateItem = function( product ){
+    dbService.put('items/'+product.id, product).then(function (result) {
       if(result.status != 'error'){
         var x = angular.copy(product);
         x.save = 'update';
@@ -49,7 +49,7 @@
     });
   };
 
-  self.saveProduct = function ( product ) {
+  self.saveItem = function ( product ) {
     if(product.id > 0){
      self.updateProduct( product );
      } else {
@@ -73,14 +73,15 @@
       source: "boem", 
       url: "http://collection.marijerooze.nl", 
       visualizationtype: "hybrid", 
-      comments: 'lalallalalalal'
+      comments: 'lalallalalalal',
+      date: 20141510
     };
 
     self.submitForm = function(isValid, data) {
 		    //if(!isValid){ return; }
 
 		    console.log( data );
-		    self.createProduct( data );
+		    //self.addItem( data );
      }
 
    }]);

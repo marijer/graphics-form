@@ -18,41 +18,41 @@ delete(table name, where clause as array)
 */
 
 
-// Products
-$app->get('/products', function() { 
+// items
+$app->get('/items', function() { 
     global $db;
     $rows = $db->select(
-                    "graphics",
-                       "id,
-                        favorite,
-                        newspaper,
-                        title,
-                        date,
-                        newscategory,
-                        credits,
-                        source,
-                        url,
-                        thumbnail,
-                        socialdata,
-                        readergenerated,
-                        opendata,
-                        gamification,
-                        tool,
-                        readerdriven,
-                        visualizationtype,
-                        annotation,
-                        flash,
-                        visualform,
-                        visualformsub,
-                        updated,
-                        hyperlinking,
-                        comments",
+                    "graphics",  //table
+                   "id,
+                    favorite,
+                    newspaper,
+                    title,
+                    date,
+                    newscategory,
+                    credits,
+                    source,
+                    url,
+                    thumbnail,
+                    socialdata,
+                    readergenerated,
+                    opendata,
+                    gamification,
+                    tool,
+                    readerdriven,
+                    visualizationtype,
+                    annotation,
+                    flash,
+                    visualform,
+                    visualformsub,
+                    updated,
+                    hyperlinking,
+                    comments",
                     array()
                     );
     echoResponse(200, $rows);
 });
 
-$app->post('/products', function() use ($app) { 
+$app->post('/items', function() use ($app) { 
     $data = json_decode($app->request->getBody());
     $mandatory = array( 'title' );
     global $db;
@@ -62,7 +62,7 @@ $app->post('/products', function() use ($app) {
     echoResponse(200, $rows);
 });
 
-$app->put('/products/:id', function($id) use ($app) { 
+$app->put('/items/:id', function($id) use ($app) { 
     $data = json_decode($app->request->getBody());
     $condition = array('id'=>$id);
     $mandatory = array();
@@ -73,7 +73,7 @@ $app->put('/products/:id', function($id) use ($app) {
     echoResponse(200, $rows);
 });
 
-$app->delete('/products/:id', function($id) { 
+$app->delete('/items/:id', function($id) { 
     global $db;
     $rows = $db->delete("graphics", array('id'=>$id));
     if($rows["status"]=="success")
